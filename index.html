@@ -1,11 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>life in words</title>
-</head>
-<body>
-    <h1>hello</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life in Words</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Kết nối CSS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font chữ viết tay -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- bootstrap -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Life in Words</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#gioithieu">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#trangchu">Đăng bài</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#lienhe">Liên hệ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="header">
+      <div class="container">
+        <h1 class="blog-title">Life in Words</h1>
+        <p>Chia sẻ những câu chuyện, cảm xúc và hành trình cuộc sống.</p>
+      </div>
+    </header>
+
+    <!-- Phần Giới thiệu -->
+    <section id="gioithieu" class="container mt-5">
+      <h2>Giới thiệu</h2>
+      <!-- Tiêu đề phần giới thiệu -->
+      <p>
+        Life in Words là một không gian để chia sẻ những câu chuyện, những suy
+        nghĩ, cảm xúc và trải nghiệm của chúng tôi về cuộc sống. Tại đây, bạn có
+        thể tìm thấy những bài viết về mọi thứ, từ những câu chuyện đời thường
+        cho đến những trải nghiệm sâu sắc và ý nghĩa. Chúng tôi tin rằng mỗi câu
+        chuyện đều có giá trị và hy vọng rằng bạn sẽ tìm thấy điều gì đó có thể
+        truyền cảm hứng cho mình từ những bài viết này.
+      </p>
+      <p>
+        Chúng tôi muốn tạo ra một cộng đồng nơi mọi người có thể giao lưu, chia
+        sẻ và cùng nhau khám phá cuộc sống qua những dòng chữ. Mỗi bài viết đều
+        là một lời mời gọi để bạn tham gia vào hành trình này. Cùng nhau, chúng
+        ta sẽ tạo ra những kỷ niệm đẹp và nhiều bài học quý giá.
+      </p>
+    </section>
+
+    <!-- Phần đăng bài -->
+    <section id="trangchu" class="container mt-5">
+    <div class="container">
+      <h2>Đăng bài viết mới</h2>
+      <form id="postForm">
+        <div class="form-group">
+          <label for="title">Tiêu đề</label>
+          <input
+            type="text"
+            id="title"
+            class="form-control"
+            placeholder="Nhập tiêu đề bài viết"
+          />
+        </div>
+        <div class="form-group">
+          <label for="content">Nội dung</label>
+          <textarea
+            id="content"
+            class="form-control"
+            rows="10"
+            placeholder="Nhập nội dung bài viết"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Đăng bài</button>
+      </form>
+    </div>
+
+    <!-- Danh sách các bài viết đã đăng -->
+    <div class="container mt-5">
+      <h2>Các bài viết đã đăng</h2>
+      <div class="post">
+        <h3>Tiêu đề bài viết 1</h3>
+        <p>
+          Hôm nay tôi muốn chia sẻ một câu chuyện về hành trình vượt qua khó
+          khăn trong cuộc sống...
+        </p>
+        <small>Đăng lúc: 10:30 AM, 25/01/2025</small>
+      </div>
+      <div class="post">
+        <h3>Tiêu đề bài viết 2</h3>
+        <p>
+          Đôi khi, chúng ta quên đi tầm quan trọng của những giây phút bình dị
+          nhưng lại chính là những điều tạo nên hạnh phúc lâu dài. Đừng vội
+          vàng, hãy sống chậm lại và cảm nhận từng khoảnh khắc, bạn sẽ thấy cuộc
+          sống thật tuyệt vời.
+        </p>
+        <small>Đăng lúc: 12:45 PM, 25/01/2025</small>
+      </div>
+    </div>
+    <section id="lienhe" class="container mt-5"></section>
+    <div class="container">
+        <div class="contact-form">
+          <div class="container">
+            <div class="contact-info">
+              <h3>Liên hệ với chúng tôi</h3>
+              <p><strong>Số điện thoại:</strong> <a href="tel:+123456789">+123 456 789</a></p>
+              <p><strong>Email:</strong> <a href="https://mail.google.com/">huatrunghung1210@gmail.com</a></p>
+              <p><strong>Trang web:</strong> <a href="https://www.youtube.com/" target="_blank">https://www.youtube.com/</a></p>
+            </div>
+          </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>
