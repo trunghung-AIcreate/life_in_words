@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/* Đặt kiểu cơ bản cho toàn bộ trang */
+body {
+    font-family: 'Dancing Script', cursive; /* Phông chữ viết tay */
+    margin: 0;
+    padding: 0;
+    background-color: #F1F1F1; /* Màu xám sáng */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333; /* Màu chữ mặc định */
+}
+
+/* Định dạng container của form đăng nhập */
+.login-container {
+    background-color: #FFFFFF; /* Màu nền trắng */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #007BFF; /* Màu xanh cho tiêu đề */
+}
+
+/* Định dạng các nhóm input */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Định dạng nút đăng nhập */
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF; /* Màu xanh cho nút */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Định dạng cho phần lỗi hoặc thông báo nếu cần */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}

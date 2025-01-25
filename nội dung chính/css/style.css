@@ -58,3 +58,31 @@ body {
 html {
     scroll-behavior: smooth; /* Kích hoạt hiệu ứng cuộn mượt */
 }
+/* Liên hệ với chúng tôi - Footer */
+#lienhe {
+    background-color: #003366; /* Màu nền của footer */
+    color: white; /* Màu chữ trắng */
+    padding: 30px 0; /* Khoảng cách trên và dưới trong phần footer */
+    text-align: center; /* Căn giữa nội dung */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px; /* Để tạo khoảng cách giữa phần trên và phần footer */
+}
+
+/* Để căn chỉnh các liên kết trong footer */
+#lienhe a {
+    color: #F1F1F1; /* Màu chữ của các liên kết */
+    text-decoration: none; /* Bỏ gạch dưới của các liên kết */
+}
+
+#lienhe a:hover {
+    color: #A9D9D9; /* Màu khi hover chuột qua các liên kết */
+    text-decoration: underline; /* Thêm gạch dưới khi hover */
+}
+
+/* Thêm khoảng cách giữa các phần tử trong footer */
+.contact-info p {
+    font-size: 1.1em;
+    margin: 10px 0; /* Khoảng cách giữa các thông tin */
+}
