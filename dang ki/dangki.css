@@ -13,7 +13,7 @@ body {
     color: #333; /* Màu chữ mặc định */
 }
 
-/* Định dạng container của form đăng nhập */
+/* Định dạng container của form đăng nhập và đăng ký */
 .login-container {
     background-color: #FFFFFF; /* Màu nền trắng */
     padding: 30px;
@@ -50,7 +50,7 @@ body {
     font-size: 16px;
 }
 
-/* Định dạng nút đăng nhập */
+/* Định dạng nút */
 .login-btn {
     width: 100%;
     padding: 10px;
@@ -61,24 +61,25 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.login-btn svg {
-    margin-left: 10px; /* Khoảng cách giữa chữ và icon */
-    width: 20px;
-    height: 20px;
 }
 
 .login-btn:hover {
     background-color: #0056b3;
 }
 
-/* Định dạng cho phần lỗi hoặc thông báo nếu cần */
-.error-message {
-    color: red;
+/* Định dạng dòng chuyển đổi */
+.switch-message {
+    margin-top: 20px;
     font-size: 14px;
-    margin-top: 10px;
+    color: #555;
+}
+
+.switch-message a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch-message a:hover {
+    text-decoration: underline;
 }

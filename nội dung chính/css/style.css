@@ -2,87 +2,83 @@
 body, h1, h2, p {
     margin: 0;
     padding: 0;
-    font-family: 'Dancing Script', cursive; /* Phông chữ viết tay */
+    font-family: 'Dancing Script', cursive;
 }
 
-/* Bố cục căn bản */
 body {
-    background-color: #F5F5F5; /* Màu nền sáng */
-    color: #333; /* Màu chữ mặc định */
-    line-height: 1.6; /* Khoảng cách giữa các dòng */
+    background-color: #F5F5F5;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 56px; /* Tạo khoảng trống để tránh navbar che nội dung */
 }
 
 .container {
     width: 90%;
-    max-width: 800px; /* Giới hạn chiều rộng tối đa */
-    margin: 0 auto; /* Căn giữa nội dung */
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* Header - Phần đầu trang */
+/* Header */
 .header {
-    background-color: #A9D9D9; /* Màu xanh pastel */
-    text-align: center; /* Căn giữa nội dung */
-    padding: 20px 0; /* Tạo khoảng cách trên và dưới */
-    border-bottom: 2px solid #81C7C7; /* Đường viền dưới */
+    background-color: #A9D9D9;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #81C7C7;
 }
 
-/* Tên blog nổi bật hơn */
-.blog-title {
-    font-family: 'Dancing Script', cursive; /* Phông chữ viết tay */
-    color: #FFFFFF; /* Chữ màu trắng */
-    background-color: #003366; /* Nền xanh đậm */
-    display: inline-block; /* Giúp tạo nền chỉ bao quanh chữ */
-    padding: 10px 20px; /* Tạo khoảng cách trong phần nền */
-    font-size: 3em; /* Tăng kích thước chữ */
-    font-weight: bold; /* Chữ đậm */
-    border-radius: 8px; /* Bo góc cho nền */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Đổ bóng cho nền */
+.hover-animated-title {
+    color: #FFFFFF;
+    background-color: #00CC99;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 3em;
+    font-weight: bold;
+    border-radius: 8px;
     margin: 0;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.header p {
-    color: #333; /* Xám đậm */
-    font-size: 1.2em; /* Kích thước chữ nhỏ hơn tiêu đề */
-    margin-top: 10px; /* Tạo khoảng cách giữa tiêu đề và mô tả */
+.hover-animated-title:hover {
+    color: #0000FF;
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
+
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Đảm bảo navbar nằm trên các phần khác */
+    z-index: 1000;
     width: 100%;
     background-color: #007b7f;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 html {
-    scroll-behavior: smooth; /* Kích hoạt hiệu ứng cuộn mượt */
-}
-/* Liên hệ với chúng tôi - Footer */
-#lienhe {
-    background-color: #003366; /* Màu nền của footer */
-    color: white; /* Màu chữ trắng */
-    padding: 30px 0; /* Khoảng cách trên và dưới trong phần footer */
-    text-align: center; /* Căn giữa nội dung */
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 50px; /* Để tạo khoảng cách giữa phần trên và phần footer */
+    scroll-behavior: smooth;
 }
 
-/* Để căn chỉnh các liên kết trong footer */
+/* Footer */
+#lienhe {
+    background: linear-gradient(to right, #003366, #005f5f);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
 #lienhe a {
-    color: #F1F1F1; /* Màu chữ của các liên kết */
-    text-decoration: none; /* Bỏ gạch dưới của các liên kết */
+    color: #F1F1F1;
+    text-decoration: none;
 }
 
 #lienhe a:hover {
-    color: #A9D9D9; /* Màu khi hover chuột qua các liên kết */
-    text-decoration: underline; /* Thêm gạch dưới khi hover */
+    color: #A9D9D9;
+    text-decoration: underline;
 }
 
-/* Thêm khoảng cách giữa các phần tử trong footer */
 .contact-info p {
     font-size: 1.1em;
-    margin: 10px 0; /* Khoảng cách giữa các thông tin */
+    margin: 10px 0;
 }
