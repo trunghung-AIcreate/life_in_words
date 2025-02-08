@@ -10,7 +10,7 @@ body {
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: rgba(255, 255, 255, 0.5);
@@ -78,3 +78,15 @@ body {
     transform: scale(1.05);
     text-decoration: underline;
 }
+.come_back-btn{
+        width: 15%;
+        padding: 10px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+}
+.come_back-btn:hover{background-color: #0056b3;}
