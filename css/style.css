@@ -123,3 +123,22 @@ html {
     0% { transform: scale(1); font-size: 16px; }
     100% { transform: scale(1.05); font-size: 18px; }
 }
+.chuyentrang-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(to right, #28a745, #218838);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.chuyentrang-btn:hover {
+    background: linear-gradient(to right, #218838, #28a745);
+    transform: scale(1.1);
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+}

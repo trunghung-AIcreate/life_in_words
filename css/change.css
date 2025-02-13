@@ -1,0 +1,56 @@
+body {
+    font-family: 'Dancing Script', cursive;
+    background: url('https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg') no-repeat center center/cover;
+    background-color: #A9D9A9;
+    color: #333;
+    text-align: center;
+}
+
+.edit-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background:rgba(255, 255, 255, 0.366);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    color: #007F00;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.edit-form label {
+    display: block;
+    text-align: left;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.edit-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.save-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    background-color: #007F00;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.save-btn:hover {
+    transform: scale(1.05);
+}
