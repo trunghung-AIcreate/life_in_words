@@ -2,9 +2,9 @@
 const currentUser = localStorage.getItem("currentUser");
 const admin_btn = document.getElementById("admin-btn");
 if (currentUser) {
-  admin_btn.href = "../html/quanly.html";
+  admin_btn.href = "./html/quanly.html";
 } else {
-  admin_btn.href = "../html/login.html";
+  admin_btn.href = "./html/login.html";
 }
 
 //tao birn luu 1 account nd
