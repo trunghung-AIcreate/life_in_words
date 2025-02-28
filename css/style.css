@@ -306,3 +306,61 @@ html {
     font-size: 18px;
   }
 }
+/* Services Section */
+#our-services {
+    background-color: #111; /* Màu nền đen */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-box {
+    background-color: #222; /* Màu nền xám đậm */
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+.service-box i {
+    font-size: 40px;
+    color: #4A90E2; /* Màu xanh icon */
+    margin-bottom: 10px;
+}
+
+.service-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
