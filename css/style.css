@@ -327,7 +327,7 @@ html {
 }
 
 .service-box {
-    background-color: #222; /* Màu nền xám đậm */
+    background: linear-gradient(to right, #003366, #005f5f); /* Màu nền xám đậm */
     padding: 20px;
     border-radius: 10px;
     width: 250px;
