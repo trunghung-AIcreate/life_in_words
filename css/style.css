@@ -308,7 +308,7 @@ html {
 }
 /* Services Section */
 #our-services {
-    background-color: #111; /* Màu nền đen */
+    background: linear-gradient(to right, #003366, #005f5f); /* Màu nền đen */
     color: white;
     padding: 60px 20px;
     text-align: center;
