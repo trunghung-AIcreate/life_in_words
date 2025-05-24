@@ -1,114 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Life in Words</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-  <!-- Thanh điều hướng -->
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">Life in Words</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="#gioithieu">Giới thiệu</a></li>
-          <li class="nav-item"><a class="nav-link" href="#trangchu">Đăng bài</a></li>
-          <li class="nav-item"><a class="nav-link" href="#Baidadang">Bài đã đăng</a></li>
-          <li class="nav-item"><a class="nav-link" href="#lienhe">Liên hệ</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life in Words</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- Phần Header -->
-  <header class="header">
-    <div class="container">
-      <h1 class="hover-animated-title">Life in Words</h1>
-      <p>Chia sẻ những câu chuyện cảm xúc và hành trình cuộc sống.</p>
-    </div>
-  </header>
-
-  <!-- Phần Giới thiệu -->
-  <section id="gioithieu" class="container mt-5">
-    <h2>Giới thiệu</h2>
-    <p>Life in Words là một không gian để chia sẻ những câu chuyện, những suy nghĩ, cảm xúc và trải nghiệm của chúng tôi về cuộc sống...</p>
-    <p>Chúng tôi muốn tạo ra một cộng đồng nơi mọi người có thể giao lưu, chia sẻ và cùng nhau khám phá cuộc sống qua những dòng chữ...</p>
-  </section>
-
-  <!-- Phần đăng bài -->
-  <section id="trangchu" class="container mt-5">
-    <h2>Đăng bài viết mới</h2>
-    <form id="postForm">
-      <div class="form-group">
-        <label for="title">Tiêu đề</label>
-        <input type="text" id="title" class="form-control" placeholder="Nhập tiêu đề bài viết">
-      </div>
-      <div class="form-group">
-        <label for="content">Nội dung</label>
-        <textarea id="content" class="form-control" rows="10" placeholder="Nhập nội dung bài viết"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Đăng bài</button>
-    </form>
-
-
-    
-
-
-    <!-- Danh sách bài viết -->
-    <section id="Baidadang" class="container mt-5">
-      <h2>các bài viết đã đăng</h2>
-      <div class="row">
-        <div class="col-sm-6 mb-3 mb-sm-0">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-      </div>
-   
-  </section>
-
-  <!-- Phần Liên hệ -->
-  <section id="lienhe" class="container mt-5">
-    <div class="contact-form">
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- nut scroll-up -->
+    <a href="#" class="scroll-up-btn">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    <!-- Thanh điều hướng -->
+    <nav class="sticky-top navbar navbar-expand-lg">
       <div class="container">
-        <div class="contact-info">
-          <h3>Liên hệ với chúng tôi</h3>
-          <p><strong>Số điện thoại:</strong> <a href="tel:+123456789">+123 456 789</a></p>
-          <p><strong>Email:</strong> <a href="mailto:huatrunghung1210@gmail.com">huatrunghung1210@gmail.com</a></p>
-          <p><strong>Trang web:</strong> <a href="https://www.youtube.com/" target="_blank">https://www.youtube.com/</a></p>
+        <a
+          class="navbar-brand"
+          href="#"
+          style="
+            font-size: 30px;
+            font-weight: bolder;
+            font-family: 'Dancing Script', cursive;
+          "
+          >Life in Words</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#gioithieu">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#dichvu">Dịch vụ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Baidadang">Bài đã đăng</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#feedback">Đánh giá</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#lienhe">Liên hệ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="admin-btn" href="./html/quanly.html">Admin</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <div style="text-align: center;">
-    <a href="./html/quanly.html" class="chuyentrang-btn">Chuyển trang quản lý</a>
-  </div>
-  <script src="js/manage_account.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+    <main>
+      <!-- Phần Header -->
+      <header class="header" id="header">
+        <div class="container">
+          <h1 class="hover-animated-title">Life in Words</h1>
+          <p style="color: black">
+            Chia sẻ những câu chuyện cảm xúc và hành trình cuộc sống.
+          </p>
+        </div>
+      </header>
+
+      <!-- Phần Giới thiệu -->
+      <section id="gioithieu" class="container mt-5">
+        <h2>Giới thiệu</h2>
+        <p>
+          Life in Words là một không gian để chia sẻ những câu chuyện, những suy
+          nghĩ, cảm xúc và trải nghiệm của chúng tôi về cuộc sống...
+        </p>
+        <p>
+          Chúng tôi muốn tạo ra một cộng đồng nơi mọi người có thể giao lưu,
+          chia sẻ và cùng nhau khám phá cuộc sống qua những dòng chữ...
+        </p>
+      </section>
+
+      <!-- Phan dich vu -->
+      <section id="dichvu" class="container mt-5">
+        <!-- Our Services Section -->
+<!-- Our Services Section -->
+<section id="our-services">
+    <div class="services-container">
+        <h2>Our Services</h2>
+        <div class="services-wrapper">
+            <!-- Service 1 -->
+            <div class="service-box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Website Development</h3>
+                <p>We create modern and responsive websites tailored to your needs.</p>
+            </div>
+            <!-- Service 2 -->
+            <div class="service-box">
+                <i class="fa-solid fa-mobile-alt"></i>
+                <h3>App Development</h3>
+                <p>We develop user-friendly mobile applications for iOS and Android.</p>
+            </div>
+            <!-- Service 3 -->
+            <div class="service-box">
+                <i class="fa-solid fa-palette"></i>
+                <h3>Design & UX</h3>
+                <p>Creating intuitive and visually appealing designs for a better user experience.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+      <!-- Danh sách bài viết -->
+      <section
+        id="Baidadang"
+        class="container mt-5 d-flex justify-content-center flex-wrap"
+      >
+        <h2>các bài viết đã đăng</h2>
+<div class="container mt-5">
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <img class="card-img-top" src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg" alt="Card image cap" />
+                <div class="card-body">
+                    <h5 class="card-title">Card Title 1</h5>
+                    <p class="card-text">Some quick example text to build on the card title.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <img class="card-img-top" src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg" alt="Card image cap" />
+                <div class="card-body">
+                    <h5 class="card-title">Card Title 2</h5>
+                    <p class="card-text">Another example text to build on the card title.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <img class="card-img-top" src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg" alt="Card image cap" />
+                <div class="card-body">
+                    <h5 class="card-title">Card Title 3</h5>
+                    <p class="card-text">More example text to build on the card title.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <img class="card-img-top" src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg" alt="Card image cap" />
+                <div class="card-body">
+                    <h5 class="card-title">Card Title 4</h5>
+                    <p class="card-text">Last example text to build on the card title.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <button type="button" id="view-list-post" class="btn btn-primary mt-5">
+          Xem thêm các bài viết khác
+        </button>
+      </section>
+
+      <section id="feedback" class="container mt-5">
+        <h2>Đánh giá từ khách hàng</h2>
+        <div id="testimonialCarousel" class="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card shadow-sm rounded-3">
+                <div class="quotes display-2 text-body-tertiary">
+                  <i class="bi bi-quote"></i>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    "Some quick example text to build on the card title and make
+                    up the bulk of the card's content."
+                  </p>
+                  <div class="d-flex align-items-center pt-2">
+                    <img
+                      src="https://codingyaar.com/wp-content/uploads/square-headshot-1.png"
+                      alt="bootstrap testimonial carousel slider 2"
+                    />
+                    <div>
+                      <h5 class="card-title fw-bold">Jane Doe</h5>
+                      <span class="text-secondary">CEO, Example Company</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card shadow-sm rounded-3">
+                <div class="quotes display-2 text-body-tertiary">
+                  <i class="bi bi-quote"></i>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    "Some quick example text to build on the card title and make
+                    up the bulk of the card's content."
+                  </p>
+                  <div class="d-flex align-items-center pt-2">
+                    <img
+                      src="https://codingyaar.com/wp-content/uploads/square-headshot-2.png"
+                      alt="bootstrap testimonial carousel slider 2"
+                    />
+                    <div>
+                      <h5 class="card-title fw-bold">June Doe</h5>
+                      <span class="text-secondary">CEO, Example Company</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card shadow-sm rounded-3">
+                <div class="quotes display-2 text-body-tertiary">
+                  <i class="bi bi-quote"></i>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    "Some quick example text to build on the card title and make
+                    up the bulk of the card's content."
+                  </p>
+                  <div class="d-flex align-items-center pt-2">
+                    <img
+                      src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg"
+                      alt="bootstrap testimonial carousel slider 2"
+                    />
+                    <div>
+                      <h5 class="card-title fw-bold">John Doe</h5>
+                      <span class="text-secondary">CEO, Example Company</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card shadow-sm rounded-3">
+                <div class="quotes display-2 text-body-tertiary">
+                  <i class="bi bi-quote"></i>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    "Some quick example text to build on the card title and make
+                    up the bulk of the card's content."
+                  </p>
+                  <div class="d-flex align-items-center pt-2">
+                    <img
+                      src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg"
+                      alt="bootstrap testimonial carousel slider 2"
+                    />
+                    <div>
+                      <h5 class="card-title fw-bold">John Doe</h5>
+                      <span class="text-secondary">CEO, Example Company</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card shadow-sm rounded-3">
+                <div class="quotes display-2 text-body-tertiary">
+                  <i class="bi bi-quote"></i>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    "Some quick example text to build on the card title and make
+                    up the bulk of the card's content."
+                  </p>
+                  <div class="d-flex align-items-center pt-2">
+                    <img
+                      src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg"
+                      alt="bootstrap testimonial carousel slider 2"
+                    />
+                    <div>
+                      <h5 class="card-title fw-bold">John Doe</h5>
+                      <span class="text-secondary">CEO, Example Company</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card shadow-sm rounded-3">
+                <div class="quotes display-2 text-body-tertiary">
+                  <i class="bi bi-quote"></i>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    "Some quick example text to build on the card title and make
+                    up the bulk of the card's content."
+                  </p>
+                  <div class="d-flex align-items-center pt-2">
+                    <img
+                      src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg"
+                      alt="bootstrap testimonial carousel slider 2"
+                    />
+                    <div>
+                      <h5 class="card-title fw-bold">John Doe</h5>
+                      <span class="text-secondary">CEO, Example Company</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card shadow-sm rounded-3">
+                <div class="quotes display-2 text-body-tertiary">
+                  <i class="bi bi-quote"></i>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    "Some quick example text to build on the card title and make
+                    up the bulk of the card's content."
+                  </p>
+                  <div class="d-flex align-items-center pt-2">
+                    <img
+                      src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg"
+                      alt="bootstrap testimonial carousel slider 2"
+                    />
+                    <div>
+                      <h5 class="card-title fw-bold">John Doe</h5>
+                      <span class="text-secondary">CEO, Example Company</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card shadow-sm rounded-3">
+                <div class="quotes display-2 text-body-tertiary">
+                  <i class="bi bi-quote"></i>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    "Some quick example text to build on the card title and make
+                    up the bulk of the card's content."
+                  </p>
+                  <div class="d-flex align-items-center pt-2">
+                    <img
+                      src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg"
+                      alt="bootstrap testimonial carousel slider 2"
+                    />
+                    <div>
+                      <h5 class="card-title fw-bold">John Doe</h5>
+                      <span class="text-secondary">CEO, Example Company</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card shadow-sm rounded-3">
+                <div class="quotes display-2 text-body-tertiary">
+                  <i class="bi bi-quote"></i>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    "Some quick example text to build on the card title and make
+                    up the bulk of the card's content."
+                  </p>
+                  <div class="d-flex align-items-center pt-2">
+                    <img
+                      src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg"
+                      alt="bootstrap testimonial carousel slider 2"
+                    />
+                    <div>
+                      <h5 class="card-title fw-bold">John Doe</h5>
+                      <span class="text-secondary">CEO, Example Company</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Phần Liên hệ -->
+    <footer id="lienhe" class="mt-5">
+      <div class="contact-form">
+        <div class="container">
+          <div class="contact-info">
+            <h3>Liên hệ với chúng tôi</h3>
+            <p>
+              <strong>Số điện thoại:</strong>
+              <a href="tel:+123456789">+123 456 789</a>
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:huatrunghung1210@gmail.com"
+                >huatrunghung1210@gmail.com</a
+              >
+            </p>
+            <p>
+              <strong>Trang web:</strong>
+              <a href="https://www.youtube.com/" target="_blank"
+                >https://www.youtube.com/</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/feedback.js"></script>
+    <script src="js/manage_account.js"></script>
+  </body>
 </html>
