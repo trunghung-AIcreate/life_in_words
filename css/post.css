@@ -1,0 +1,7 @@
+.image-center img {
+    max-width: 60%;
+    height: auto;
+    /* border: 1px solid #e0e0e0; */ /* Xóa hoặc comment dòng này */
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
