@@ -1,30 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bai viet ve thien nhien</title>
-    <link rel="stylesheet" href="../css/post.css">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bài viết về thiên nhiên</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 32px 16px;
+      background: #fafafa;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1.hover-title {
+      text-align: center;
+      font-size: 2.5em;
+      color: #388e3c;
+      margin-top: 32px;
+      letter-spacing: 2px;
+      text-shadow: 1px 2px 8px #b2dfdb;
+      border: 3px solid #388e3c;
+      border-radius: 16px;
+      padding: 16px 0;
+      background: #e8f5e9;
+      user-select: text;
+    }
+
+    .frame {
+      max-width: 700px;
+      margin: 24px auto;
+      border: 3px solid #388e3c;
+      border-radius: 16px;
+      background: #e8f5e9;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 16px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .frame img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 12px;
+      animation: float 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes float {
+      0%   { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+
+    .frame-text {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .frame-text strong {
+      font-size: 1.2em;
+      color: #2e7d32;
+      margin-bottom: 12px;
+      user-select: text;
+    }
+
+    #frame-desc-editable {
+      flex-grow: 1;
+      resize: vertical;
+      font-size: 1em;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #a5d6a7;
+      min-height: 90px;
+      font-family: Arial, sans-serif;
+      color: #2f2f2f;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    #editable-content {
+      max-width: 700px;
+      width: 100%;
+      min-height: 220px;
+      margin: 24px auto 0 auto;
+      padding: 16px;
+      font-size: 1em;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: vertical;
+      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+    }
+
+    #status {
+      text-align: center;
+      color: gray;
+      margin-top: 8px;
+      font-style: italic;
+      font-size: 0.9em;
+    }
+
+    .btn-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 24px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    button, .btn-back {
+      padding: 10px 24px;
+      font-size: 1em;
+      color: #fff;
+      background-color: #388e3c;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+
+    button:hover, .btn-back:hover {
+      background-color: #2e7d32;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <h1 class="hover-title" style="text-align: center; font-size: 2.5em; color: #388e3c; margin-top: 32px; letter-spacing: 2px; text-shadow: 1px 2px 8px #b2dfdb; border: 3px solid #388e3c; border-radius: 16px; padding: 16px 0; background: #e8f5e9; transition: background 0.3s, color 0.3s, font-size 0.3s;">
-        Thiên Nhiên Tươi Đẹp
-    </h1>
 
-    <div class="image-center">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Ảnh thiên nhiên đẹp" style="max-width:50%;height:auto;display:block;margin:0 auto;border-radius:12px;">
+  <h1 class="hover-title" contenteditable="true" id="page-title" spellcheck="false" title="Chỉnh sửa tiêu đề bài viết">
+    Thiên Nhiên Tươi Đẹp
+  </h1>
+
+  <div class="frame" title="Khung nội dung hình ảnh và mô tả">
+    <img src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg" alt="Ảnh thiên nhiên đẹp" id="frame-image" />
+    <div class="frame-text">
+      <strong id="frame-title" contenteditable="true" spellcheck="false" title="Chỉnh sửa tiêu đề nhỏ trong khung">Thiên nhiên hùng vĩ</strong>
+      <textarea id="frame-desc-editable" maxlength="500" placeholder="Nhập mô tả ở đây (tối đa 500 ký tự)"></textarea>
+      <div style="margin-top: 12px;">
+        <input type="file" id="upload-image" accept="image/*" />
+        <button id="btn-upload">Chọn ảnh</button>
+        <button id="btn-download">Tải ảnh xuống</button>
+      </div>
     </div>
-    <div style="display: flex; justify-content: center;">
-        <p style="max-width: 700px; text-align: center;">
-            Giữa vùng núi cao phủ mây quanh năm, có một thung lũng nhỏ như vừa bước ra từ một giấc mơ.<br>
-            Những dãy núi nối tiếp nhau như sóng trùng điệp, phủ kín bởi rừng thông xanh biếc.<br>
-            Vào buổi sớm, cả không gian ngập trong làn sương mỏng, nắng len nhẹ qua từng tán lá, phản chiếu thành những dải sáng lung linh như ánh phép màu.<br><br>
-            Từng chiếc lá rung rinh theo gió, tiếng chim hót vang vọng, tiếng suối róc rách len lỏi dưới những phiến đá phủ rêu.<br>
-            Không khí nơi đây trong lành đến mức có thể cảm nhận được từng nhịp thở của thiên nhiên.<br>
-            Đôi lúc, bạn sẽ bắt gặp vài ngôi nhà gỗ nhỏ nép mình bên sườn núi, khói lam chiều bay lên lặng lẽ như nét chấm phá trong bức tranh thủy mặc.<br><br>
-            Dù là thực tại, nơi này vẫn mang một vẻ đẹp gần như siêu thực — như thể bạn đang sống giữa một thước phim anime với tất cả sự bình yên, trong trẻo và tinh khôi của tuổi trẻ.
-        </p>
-    </div>
+  </div>
+
+  <textarea id="editable-content" spellcheck="false" placeholder="Nhập nội dung bài viết ở đây..."></textarea>
+
+  <p id="status">Chưa lưu</p>
+
+  <div class="btn-wrapper">
+    <button id="btn-improve">Cải thiện văn bản</button>
+    <a href="../index.html" class="btn-back">Quay lại</a>
+  </div>
+
+  <script>
+    const pageTitle = document.getElementById('page-title');
+    const frameTitle = document.getElementById('frame-title');
+    const frameDesc = document.getElementById('frame-desc-editable');
+    const content = document.getElementById('editable-content');
+    const frameImage = document.getElementById('frame-image');
+    const status = document.getElementById('status');
+    const uploadInput = document.getElementById('upload-image');
+    const btnUpload = document.getElementById('btn-upload');
+    const btnDownload = document.getElementById('btn-download');
+    const btnImprove = document.getElementById('btn-improve');
+
+    const defaults = {
+      pageTitle: 'Thiên Nhiên Tươi Đẹp',
+      frameTitle: 'Thiên nhiên hùng vĩ',
+      frameDesc: `Giữa vùng núi cao phủ mây quanh năm, có một thung lũng nhỏ như vừa bước ra từ một giấc mơ.
+Những dãy núi nối tiếp nhau như sóng trùng điệp, phủ kín bởi rừng thông xanh biếc.
+Vào buổi sớm, cả không gian ngập trong làn sương mỏng, nắng len nhẹ qua từng tán lá, phản chiếu thành những dải sáng lung linh như ánh phép màu.
+
+Từng chiếc lá rung rinh theo gió, tiếng chim hót vang vọng, tiếng suối róc rách len lỏi dưới những phiến đá phủ rêu.
+Không khí nơi đây trong lành đến mức có thể cảm nhận được từng nhịp thở của thiên nhiên.
+Đôi lúc, bạn sẽ bắt gặp vài ngôi nhà gỗ nhỏ nép mình bên sườn núi, khói lam chiều bay lên lặng lẽ như nét chấm phá trong bức tranh thủy mặc.`,
+      content: `Dù là thực tại, nơi này vẫn mang một vẻ đẹp gần như siêu thực — như thể bạn đang sống giữa một thước phim anime với tất cả sự bình yên, trong trẻo và tinh khôi của tuổi trẻ.`
+    };
+
+    pageTitle.textContent = localStorage.getItem('pageTitle') || defaults.pageTitle;
+    frameTitle.textContent = localStorage.getItem('frameTitle') || defaults.frameTitle;
+    frameDesc.value = localStorage.getItem('frameDesc') || defaults.frameDesc;
+    content.value = localStorage.getItem('content') || defaults.content;
+
+    const savedImage = localStorage.getItem('frameImage');
+    if (savedImage) {
+      frameImage.src = savedImage;
+    }
+
+    let timer = null;
+    function scheduleSave() {
+      status.textContent = 'Đang soạn...';
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        const newPageTitle = pageTitle.textContent.trim() || defaults.pageTitle;
+        let newFrameDesc = frameDesc.value.trim();
+        if (newFrameDesc.length > 500) {
+          newFrameDesc = newFrameDesc.substring(0, 500);
+          frameDesc.value = newFrameDesc;
+          alert('Mô tả tối đa 500 ký tự.');
+        }
+        const newFrameTitle = frameTitle.textContent.trim() || defaults.frameTitle;
+        const newContent = content.value;
+
+        localStorage.setItem('pageTitle', newPageTitle);
+        localStorage.setItem('frameTitle', newFrameTitle);
+        localStorage.setItem('frameDesc', newFrameDesc);
+        localStorage.setItem('content', newContent);
+
+        status.textContent = 'Đã lưu lúc: ' + new Date().toLocaleTimeString();
+      }, 3000);
+    }
+
+    [pageTitle, frameTitle].forEach(el => el.addEventListener('input', scheduleSave));
+    frameDesc.addEventListener('input', scheduleSave);
+    content.addEventListener('input', scheduleSave);
+
+    btnUpload.addEventListener('click', () => uploadInput.click());
+
+    uploadInput.addEventListener('change', e => {
+      const file = e.target.files[0];
+      if (!file) return;
+      if (!file.type.startsWith('image/')) {
+        alert('Vui lòng chọn file ảnh hợp lệ.');
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = event => {
+        frameImage.src = event.target.result;
+        localStorage.setItem('frameImage', event.target.result);
+        status.textContent = 'Ảnh đã được thay đổi và lưu.';
+      };
+      reader.readAsDataURL(file);
+    });
+
+    btnDownload.addEventListener('click', () => {
+      const a = document.createElement('a');
+      a.href = frameImage.src;
+      a.download = 'anh-thien-nhien.jpg';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    });
+
+    function improveText(text) {
+      if (!text) return "";
+      const replacements = {
+        "\\bk dc\\b": "không được",
+        "\\bk đ\\b": "không được",
+        "\\bk\\b": "không",
+        "\\bko\\b": "không",
+        "\\bh\\b": "giờ",
+        "\\bt\\b": "tôi",
+        "\\bj\\b": "gì",
+        "\\bhok\\b": "không",
+        "\\bđc\\b": "được"
+      };
+      for (let key in replacements) {
+        const re = new RegExp(key, "gi");
+        text = text.replace(re, replacements[key]);
+      }
+
+      text = text
+        .split(/([.!?]\s+|\n+)/)
+        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+        .join("");
+
+      if (!/[.!?]$/.test(text.trim())) {
+        text += ".";
+      }
+
+      return text.replace(/\s+/g, " ").trim();
+    }
+
+    btnImprove.addEventListener("click", () => {
+      const original = content.value;
+      const improved = improveText(original);
+      content.value = improved;
+      localStorage.setItem("content", improved);
+      status.textContent = "Đã cải thiện và lưu lúc: " + new Date().toLocaleTimeString();
+    });
+  </script>
 </body>
 </html>
