@@ -1,51 +1,51 @@
-//lay thong tinh nguoi dung nhap vao from//
-function vaidateFrom(email, password){
-    //kiem tra rong
-    if(email == "" || password == ""){
-        alert("you need to fell all fields!")
-        return false;
-    }
+const loginForm = document.getElementById("loginForm");
 
-    const email_regex =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ //bien luu (kiem tra cuu phap)
-    //kiem tra format email
-    if (email_regex.text(email)==fase) {
-        alert("email is bad format")
-        return false;
-    }
-    //kiem tra format password
-    if (password.leght < 6 ){
-        alert("pass needs least 6 lettert!")
-        return false;
-    }
-    //kiem tra do dai user name
-    if (username.leght < 6 ){
-        alert("pass needs least 5 lettert!")
-        return false;
-    }
+// -----------------------------------------------------
+// kiem tra trung lap
+function isEmailRegistered(email) {
+  // kiem tra xem email da ton tai trong local storage chua
+  if (localStorage.getItem(email) !== null) {
     return true;
+  }
+  return false;
 }
 
-//luu vao local strore=> kiem tra trang thai co login chua
-function checkloginaccount(defaultAccount){
-    //lay du lieu tu from html
-    const password = document.getElementById(password).ariaValueMax.trim();
-    const username =  document.getElementById(username).ariaValueMax.trim();
-    //kiem tra from
-    if (vaidateFrom(username,password)){
-        if (defaultAccount.username == username){
-            if (defaultAccount.password == password){
-                location.href = "../index.html"
-            }else{
-                alert("Email is not exist is database, please sign up")
-            }
-        }
-    }else retrun;
-
+// -----------------------------------------------------
+// dang nhap -> chuyen home
+function loginToHome() {
+  // lay du lieu tu form
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  // kiem tra email da dang ki chua
+  if (isEmailRegistered(username)) {
+    const userInfo = JSON.parse(localStorage.getItem(username));
+    // kiem tra password
+    const passwordStored = userInfo.password;
+    // so sanh password
+    if (passwordStored === password) {
+      // dang nhap thanh cong
+      // luu current user vao local storage
+      localStorage.setItem("currentUser", username);
+      alert("Login successful! Redirecting to home page...");
+      // chuyen trang
+      window.location.href = "../index.html"; // chuyen den trang home
+    } else {
+      // mat khau khong dung
+      alert("Incorrect password. Please try again.");
+      return;
+    }
+  } else {
+    // email chua dang ki
+    alert("Email not registered. Please sign up first.");
+    return;
+  }
 }
-document:getElementById("login-btn").addEventListener("click",function(event){
-    event.preventDefault();
-    //lay lai du lieu tai khoan nac dinh trong local storage
-    // getItem: tra ve du Lieu json -> su dung ham parse() chuyen thanh kieu du Lieu js
-    const defaultAccount = JSON.parselocalStorage.getItem("defaultAccount")
-    checkloginaccount(defaultAccount);
-});
+
+// -----------------------------------------------------
+// bat su kien cho nut dang nhap
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // ngan chan submit mac dinh (chuyen trang theo action/ sua url)
+    loginToHome(); // goi ham dang nhap
+  });

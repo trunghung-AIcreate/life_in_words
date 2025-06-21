@@ -76,7 +76,14 @@
               <a class="nav-link" href="../index.html#lienhe">Liên hệ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="admin-btn" href="#">Admin</a>
+              <a class="nav-link" id="login-btn" href="../html/login.html"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="logout-btn" href="../html/login.html"
+                >Logout</a
+              >
             </li>
           </ul>
         </div>
@@ -85,32 +92,6 @@
 
     <!-- main -->
     <main>
-      <!-- phan dang bai -->
-      <section id="dangbai" class="container mt-5">
-        <h2>Đăng bài viết mới</h2>
-        <form id="postForm">
-          <div class="form-group">
-            <label for="title">Tiêu đề</label>
-            <input
-              type="text"
-              id="title"
-              class="form-control"
-              placeholder="Nhập tiêu đề bài viết"
-            />
-          </div>
-          <div class="form-group">
-            <label for="content">Nội dung</label>
-            <textarea
-              id="content"
-              class="form-control"
-              rows="10"
-              placeholder="Nhập nội dung bài viết"
-            ></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Đăng bài</button>
-        </form>
-      </section>
-
       <!-- phan quan ly danh sach bai viet -->
       <section id="danhsachbaiviet" class="container mt-5">
         <h2>Quản Lý Bài viết</h2>
@@ -118,7 +99,7 @@
           type="text"
           id="search"
           class="search-bar"
-          placeholder="Tìm kiếm bài viết..."
+          placeholder="Tìm kiếm bài viết bằng tựa đề hoặc id ..."
         />
         <table class="post-table">
           <thead>
@@ -126,62 +107,11 @@
               <th>ID</th>
               <th>Title</th>
               <th>Details (link)</th>
-              <th>Views</th>
-              <th>Likes</th>
-              <th>Comments</th>
+              <th>Last modified</th>
               <th>Hành Động</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Bài viết 1</td>
-              <td><a href="#">Link</a></td>
-              <td>10</td>
-              <td>10</td>
-              <td>10</td>
-              <td>
-                <a href="./change.html" class="edit-btn">Chỉnh sửa</a>
-                <button class="delete-btn">Xóa</button>
-              </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Bài viết 1</td>
-              <td><a href="#">Link</a></td>
-              <td>10</td>
-              <td>10</td>
-              <td>10</td>
-              <td>
-                <a href="./change.html" class="edit-btn">Chỉnh sửa</a>
-                <button class="delete-btn">Xóa</button>
-              </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Bài viết 1</td>
-              <td><a href="#">Link</a></td>
-              <td>10</td>
-              <td>10</td>
-              <td>10</td>
-              <td>
-                <a href="./change.html" class="edit-btn">Chỉnh sửa</a>
-                <button class="delete-btn">Xóa</button>
-              </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Bài viết 1</td>
-              <td><a href="#">Link</a></td>
-              <td>10</td>
-              <td>10</td>
-              <td>10</td>
-              <td>
-                <a href="./change.html" class="edit-btn">Chỉnh sửa</a>
-                <button class="delete-btn">Xóa</button>
-              </td>
-            </tr>
-          </tbody>
+          <tbody id="note-list"></tbody>
         </table>
       </section>
     </main>
@@ -212,5 +142,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="../js/nav.js"></script>
+    <script src="../js/manage_account.js"></script>
   </body>
 </html>

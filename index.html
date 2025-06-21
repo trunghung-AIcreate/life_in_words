@@ -60,7 +60,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#gioithieu">Giới thiệu</a>
+              <a class="nav-link" href="#header">Giới thiệu</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#dichvu">Dịch vụ</a>
@@ -75,7 +75,14 @@
               <a class="nav-link" href="#lienhe">Liên hệ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="admin-btn" href="./html/quanly.html">Admin</a>
+              <a class="nav-link" id="login-btn" href="./html/login.html"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="admin-btn" href="./html/quanly.html"
+                >Account</a
+              >
             </li>
           </ul>
         </div>
@@ -106,125 +113,51 @@
         </p>
       </section>
 
-      <!-- Phan dich vu -->
-      <section id="dichvu" class="container mt-5">
-        <!-- Our Services Section -->
-<!-- Our Services Section -->
-<section id="our-services">
-    <div class="services-container">
-        <h2>Our Services</h2>
-        <div class="services-wrapper">
+      <!-- Our Services Section -->
+      <section id="dichvu">
+        <div class="services-container">
+          <h2>Our Services</h2>
+          <div class="services-wrapper">
             <!-- Service 1 -->
             <div class="service-box">
-                <i class="fa-solid fa-code"></i>
-                <h3>Website Development</h3>
-                <p>We create modern and responsive websites tailored to your needs.</p>
+              <i class="fa-solid fa-code"></i>
+              <h3>Website Development</h3>
+              <p>
+                We create modern and responsive websites tailored to your needs.
+              </p>
             </div>
             <!-- Service 2 -->
             <div class="service-box">
-                <i class="fa-solid fa-mobile-alt"></i>
-                <h3>App Development</h3>
-                <p>We develop user-friendly mobile applications for iOS and Android.</p>
+              <i class="fa-solid fa-mobile-alt"></i>
+              <h3>App Development</h3>
+              <p>
+                We develop user-friendly mobile applications for iOS and
+                Android.
+              </p>
             </div>
             <!-- Service 3 -->
             <div class="service-box">
-                <i class="fa-solid fa-palette"></i>
-                <h3>Design & UX</h3>
-                <p>Creating intuitive and visually appealing designs for a better user experience.</p>
+              <i class="fa-solid fa-palette"></i>
+              <h3>Design & UX</h3>
+              <p>
+                Creating intuitive and visually appealing designs for a better
+                user experience.
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
-
-
-
-
-
-        <!-- Danh sách bài viết -->
-        <section
-          id="Baidadang"
-          class="container mt-5 d-flex justify-content-center flex-wrap"
-        >
-          <h2>Các bài viết đã đăng</h2>
-          <div class="container mt-5">
-            <div class="row">
-              <!-- Card 1: Giữa vùng núi cao phủ mây (đã đổi nội dung với Card 2) -->
-              <div class="col-md-6 mb-4">
-          <div class="card">
-            <!-- Ảnh đại diện bài viết -->
-            <img class="card-img-top" src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg" alt="Hành trình trưởng thành" />
-            <div class="card-body">
-              <!-- Tiêu đề bài viết -->
-              <h5 class="card-title">Giữa vùng núi cao phủ mây</h5>
-              <!-- Mô tả ngắn gọn về bài viết -->
-              <p class="card-text">
-                Giữa vùng núi cao phủ mây quanh năm, có một thung lũng nhỏ như vừa bước ra từ một giấc mơ.<br>
-                Những dãy núi nối tiếp nhau như sóng trùng điệp, phủ kín bởi rừng thông xanh biếc.<br>
-                Vào buổi sớm, cả không gian ngập trong làn sương mỏng, nắng len nhẹ qua từng tán lá, phản chiếu thành những dải sáng lung linh như ánh phép màu.<br><br>
-                Từng chiếc lá rung rinh theo gió, tiếng chim hót vang vọng, tiếng suối róc rách len lỏi dưới những phiến đá phủ rêu.<br>
-                Không khí nơi đây trong lành đến mức có thể cảm nhận được từng nhịp thở của thiên nhiên.<br>
-                Đôi lúc, bạn sẽ bắt gặp vài ngôi nhà gỗ nhỏ nép mình bên sườn núi, khói lam chiều bay lên lặng lẽ như nét chấm phá trong bức tranh thủy mặc.<br><br>
-                Dù là thực tại, nơi này vẫn mang một vẻ đẹp gần như siêu thực — như thể bạn đang sống giữa một thước phim anime với tất cả sự bình yên, trong trẻo và tinh khôi của tuổi trẻ.
-              </p>
-              <!-- Nút đọc tiếp -->
-              <a href="./html/post.html" class="btn btn-primary">Đọc tiếp</a>
-            </div>
-          </div>
-              </div>
-              <!-- Card 2: Hành trình trưởng thành (đã đổi nội dung với Card 1) -->
-              <div class="col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg" alt="Thung lũng phủ mây" />
-            <div class="card-body">
-              <h5 class="card-title">Hành trình trưởng thành</h5>
-              <p class="card-text">
-                Mỗi người đều có một hành trình trưởng thành riêng, đầy những khó khăn, thử thách và cả những niềm vui bất ngờ.<br>
-                <strong>Chủ đề:</strong> Chia sẻ về quá trình lớn lên, vượt qua thử thách, và những bài học trong cuộc sống.<br>
-                <strong>Đặc sắc:</strong> Góc nhìn cá nhân, cảm xúc chân thật, truyền cảm hứng cho người đọc.<br>
-                <strong>Đọc thêm:</strong> Hãy cùng chia sẻ câu chuyện của bạn!
-              </p>
-              <a href="./html/post2.html" class="btn btn-primary">Đọc tiếp</a>
-            </div>
-          </div>
-              </div>
-                <!-- Card 3 -->
-                <div class="col-md-6 mb-4">
-                <div class="card">
-                  <img class="card-img-top" src="https://images.pexels.com/photos/34072/pexels-photo.jpg" alt="Bình yên nơi làng quê" />
-                  <div class="card-body">
-                  <h5 class="card-title">Bình yên nơi làng quê</h5>
-                  <p class="card-text">
-                    Những buổi chiều vàng trải dài trên cánh đồng, tiếng chim gọi nhau về tổ, làn gió nhẹ mang theo hương lúa mới.<br>
-                    Làng quê là nơi lưu giữ những ký ức tuổi thơ, sự giản dị và bình yên giữa nhịp sống hối hả.<br>
-                    <strong>Chủ đề:</strong> Ký ức, quê hương, sự bình dị.<br>
-                    <strong>Đặc sắc:</strong> Hình ảnh gần gũi, cảm xúc nhẹ nhàng, gợi nhớ về nguồn cội.
-                  </p>
-                  <a href="./html/post3.html" class="btn btn-primary">Đọc tiếp</a>
-                  </div>
-                </div>
-                </div>
-          <!-- Card 4 -->
-          <div class="col-md-6 mb-4">
-            <div class="card">
-                <img class="card-img-top" src="https://images.pexels.com/photos/733857/pexels-photo-733857.jpeg" alt="Khoảnh khắc suy tư một mình" />
-              <div class="card-body">
-                <h5 class="card-title">Những khoảng lặng cần thiết</h5>
-                <p class="card-text">
-                  Giữa những ồn ào và tất bật của cuộc sống, đôi khi ta cần dừng lại một chút để lắng nghe chính mình. <br>
-                  Khoảnh khắc yên tĩnh không phải là sự cô đơn, mà là cơ hội để thấu hiểu bản thân, để chữa lành và định hướng lại hành trình.<br>
-                  <strong>Chủ đề:</strong> Tĩnh lặng, nội tâm, sự nghỉ ngơi tinh thần giữa bộn bề.<br>
-                  <strong>Đặc sắc:</strong> Lời văn nhẹ nhàng, mang chất suy tư, khơi gợi sự kết nối với người đọc.<br>
-                  <strong>Gợi mở:</strong> Đừng quên dành thời gian cho chính bạn - đó là điều quý giá nhất.
-                </p>
-                <a href="./html/post4.html" class="btn btn-primary">Đọc tiếp</a>
-              </div>
-            </div>
-          </div>
-                    </div>
-                  </div>
-                </section>        
-
+      <!-- Danh sách bài viết -->
+      <section
+        id="Baidadang"
+        class="container mt-5 d-flex justify-content-center flex-wrap"
+      >
+        <h2>Các bài viết đã đăng</h2>
+        <div class="container mt-5">
+          <div class="row" id="note-list"></div>
+        </div>
+      </section>
 
       <section id="feedback" class="container mt-5">
         <h2>Đánh giá từ khách hàng</h2>
@@ -498,8 +431,7 @@
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/feedback.js"></script>
-    <script src="js/manage_account.js"></script>
-
+    <script src="./js/nav.js"></script>
+    <script src="./js/load_posts.js"></script>
+  </body>
 </html>
-</html>
-
